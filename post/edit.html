@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Post - Lurkr</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+      <nav class="container nav">
+        <a href="../" class="logo">Lurkr</a>
+        <div class="nav-links" id="nav-links"></div>
+      </nav>
+    </header>
+
+    <main class="container" id="main">
+      <div class="form-wrapper">
+        <h1>Edit Post</h1>
+
+        <form id="edit-post-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+
+          <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" name="body"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" name="tags" placeholder="tag1, tag2, tag3" />
+            <small class="form-hint">Separate tags with commas</small>
+          </div>
+
+          <div class="form-group">
+            <label for="media-url">Image URL</label>
+            <input type="url" id="media-url" name="media-url" placeholder="https://..." />
+          </div>
+
+          <div id="error-message" class="error-message" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Lurkr</p>
+    </footer>
+
+    <script type="module" src="../js/nav.ts"></script>
+    <script type="module" src="../js/edit-post.ts"></script>
+  </body>
+</html>

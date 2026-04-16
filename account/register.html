@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Lurkr</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+      <nav class="container nav">
+        <a href="../" class="logo">Lurkr</a>
+        <div class="nav-links" id="nav-links"></div>
+      </nav>
+    </header>
+
+    <main class="container" id="main">
+      <div class="form-wrapper">
+        <h1>Register</h1>
+
+        <form id="register-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+            <small class="form-hint">Letters, numbers and underscores only</small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="name@stud.noroff.no" />
+            <small class="form-hint">Must be a @stud.noroff.no address</small>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8" />
+            <small class="form-hint">At least 8 characters</small>
+          </div>
+
+          <div id="error-message" class="error-message" aria-live="polite"></div>
+          <div id="success-message" class="success-message" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+
+        <p class="form-footer">
+          Already have an account? <a href="./login.html">Log in</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Lurkr</p>
+    </footer>
+
+    <script type="module" src="../js/nav.ts"></script>
+    <script type="module" src="../js/register.ts"></script>
+  </body>
+</html>

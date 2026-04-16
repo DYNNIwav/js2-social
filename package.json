@@ -1,0 +1,14 @@
+{
+  "name": "lurkr",
+  "version": "1.0.0",
+  "description": "Lurkr, a front-end social media application built with vanilla TypeScript and the Noroff API.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^6.0.2",
+    "vite": "^8.0.8"
+  }
+}

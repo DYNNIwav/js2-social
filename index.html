@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed - Lurkr</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+      <nav class="container nav">
+        <a href="./" class="logo">Lurkr</a>
+        <div class="nav-links" id="nav-links"></div>
+      </nav>
+    </header>
+
+    <main class="container" id="main">
+      <section>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: var(--space-lg) 0;">
+          <h1>Feed</h1>
+          <input type="search" id="search-input" placeholder="Search posts..." style="padding: 8px 12px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 0.875rem;" />
+        </div>
+        <div id="posts">
+          <div class="loading"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Lurkr</p>
+    </footer>
+
+    <script type="module" src="./js/nav.ts"></script>
+    <script type="module" src="./js/feed.ts"></script>
+  </body>
+</html>
