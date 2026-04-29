@@ -27,7 +27,7 @@ Then open the URL printed in the terminal.
 
 ## Deployment
 
-Deployed on Vercel: [URL to be added]
+Deployed on Vercel: https://js2-social.vercel.app
 
 ## Notes
 
