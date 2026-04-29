@@ -1,15 +1,15 @@
-import { apiRequest } from "./api.ts";
-import { getUsername } from "./auth.ts";
+import { apiRequest } from './api.ts';
+import { getUsername } from './auth.ts';
 
 const params = new URLSearchParams(window.location.search);
-const username = params.get("name") || getUsername();
+const username = params.get('name') || getUsername();
 if (!username) {
-  throw new Error("Username not found");
+  throw new Error('Username not found');
 }
 
-const profileContent = document.getElementById("profile-content");
+const profileContent = document.getElementById('profile-content');
 if (!profileContent) {
-  throw new Error("Profile content element not found");
+  throw new Error('Profile content element not found');
 }
 
 /**
@@ -27,15 +27,15 @@ async function loadProfile() {
 
   let html = `
     <div class="profile-header">
-      ${profile.avatar?.url ? `<img src="${profile.avatar.url}" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%;">` : ""}
+      ${profile.avatar?.url ? `<img src="${profile.avatar.url}" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%;">` : ''}
       <h1>${profile.name}</h1>
-      <p>${profile.bio || ""}</p>
+      <p>${profile.bio || ''}</p>
       <p>Followers: ${profile._count?.followers ?? 0} · Following: ${profile._count?.following ?? 0} · Posts: ${profile._count?.posts ?? 0}</p>
     </div>
   `;
 
   if (!isThisMe) {
-    const label = amIFollowing ? "Unfollow" : "Follow";
+    const label = amIFollowing ? 'Unfollow' : 'Follow';
     html += `<button id="follow-btn" class="btn btn-primary">${label}</button>`;
   }
 
@@ -45,8 +45,8 @@ async function loadProfile() {
       html += `
         <a href="/post/index.html?id=${post.id}" class="post-card">
           <h3>${post.title}</h3>
-          ${post.media?.url ? `<img src="${post.media.url}" alt="${post.media.alt || post.title}">` : ""}
-          <p>${post.body || ""}</p>
+          ${post.media?.url ? `<img src="${post.media.url}" alt="${post.media.alt || post.title}">` : ''}
+          <p>${post.body || ''}</p>
         </a>
       `;
     }
@@ -56,22 +56,22 @@ async function loadProfile() {
 
   profileContent!.innerHTML = html;
 
-  const followBtn = document.getElementById("follow-btn");
+  const followBtn = document.getElementById('follow-btn');
   if (followBtn) {
-    followBtn.addEventListener("click", () => toggleFollow(amIFollowing));
+    followBtn.addEventListener('click', () => toggleFollow(amIFollowing));
   }
 }
 
 async function toggleFollow(currentlyFollowing: boolean) {
-  const endpoint = currentlyFollowing ? "unfollow" : "follow";
+  const endpoint = currentlyFollowing ? 'unfollow' : 'follow';
   try {
     await apiRequest(`/social/profiles/${username}/${endpoint}`, {
-      method: "PUT",
+      method: 'PUT',
     });
     //reload to show updated follow status
     loadProfile();
   } catch (error: any) {
-    alert("Could not " + endpoint + ": " + error.message);
+    alert('Could not ' + endpoint + ': ' + error.message);
   }
 }
 
