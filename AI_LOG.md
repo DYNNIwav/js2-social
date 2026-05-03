@@ -50,3 +50,10 @@ Log of AI use for this assignment. I used AI for things the brief allows: brains
 **Date:** 28 April 2026
 **Purpose:** Debugging help with a bug where my profile page was missing post cards I had added with `appendChild` after I set `innerHTML` lower down.
 **Outcome:** Understood that `innerHTML =` replaces everything inside the element. Fixed it by building one HTML string and setting it once.
+
+---
+
+**Tool used:** Claude (Anthropic)
+**Date:** 3 May 2026
+**Purpose:** Going through my code before submitting. Wanted to confirm that my use of `!` non-null assertions inside async functions was the right pattern, since I already had `if (!element) throw` checks at the top of the files.
+**Outcome:** Confirmed the pattern was correct. TypeScript does not always remember the throw check inside functions further down, so `!` is needed there too. Same pattern I had been using in profile.ts.
