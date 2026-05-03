@@ -32,4 +32,4 @@ Deployed on Vercel: https://js2-social.vercel.app
 ## Notes
 
 - AI usage is documented in `AI_LOG.md`.
-- The `api.ts` and `auth.ts` files are adapted from my JS1 exam (Rettlinja), with TypeScript types and the `X-Noroff-API-Key` header added.
+- The `api.ts` and `auth.ts` files are adapted from my Rettlinja exam project, with TypeScript types and the `X-Noroff-API-Key` header added.
