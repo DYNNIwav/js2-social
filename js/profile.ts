@@ -41,7 +41,7 @@ async function loadProfile() {
 
   html += `<h2 style="margin-top: 2rem;">Posts</h2>`;
   if (profile.posts && profile.posts.length > 0) {
-    for (const post of profile.posts) {
+    for (const post of [...profile.posts].reverse()) {
       html += `
         <a href="/post/index.html?id=${post.id}" class="post-card">
           <h3>${post.title}</h3>
