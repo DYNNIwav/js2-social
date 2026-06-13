@@ -57,3 +57,12 @@ Log of AI use for this assignment. I used AI for things the brief allows: brains
 **Date:** 3 May 2026
 **Purpose:** Going through my code before submitting. Wanted to confirm that my use of `!` non-null assertions inside async functions was the right pattern, since I already had `if (!element) throw` checks at the top of the files.
 **Outcome:** Confirmed the pattern was correct. TypeScript does not always remember the throw check inside functions further down, so `!` is needed there too. Same pattern I had been using in profile.ts.
+
+---
+
+## CSS Frameworks CA
+
+**Tool used:** Claude (Anthropic)
+**Date:** 10 June 2026
+**Purpose:** Help choosing between assignment options and between Tailwind and Bootstrap with Sass, plus setup of Tailwind v4 in the existing Vite project
+**Outcome:** Tailwind v4 installed and building correctly. All page styling done independently.

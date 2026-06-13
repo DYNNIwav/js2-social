@@ -19,23 +19,50 @@
       <div class="form-wrapper">
         <h1>Log in</h1>
 
-        <form id="login-form">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="name@stud.noroff.no" />
-            <small class="form-hint">Must be a @stud.noroff.no address</small>
+        <form id="login-form" class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4">
+            <label for="email" class="text-sm font-medium">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="name@stud.noroff.no"
+              class="rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary user-invalid:border-red-500"
+            />
+            <small class="text-xs">Must be a @stud.noroff.no address</small>
           </div>
 
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required minlength="8" />
-            <small class="form-hint">At least 8 characters</small>
+          <div class="flex flex-col gap-4">
+            <label for="password" class="text-sm font-medium">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+              class="rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary user-invalid:border-red-500"
+            />
+            <small class="text-xs">At least 8 characters</small>
           </div>
 
-          <div id="error-message" class="error-message" aria-live="polite"></div>
-          <div id="success-message" class="success-message" aria-live="polite"></div>
+          <div
+            id="error-message"
+            class="text-xs text-red-500"
+            aria-live="polite"
+          ></div>
+          <div
+            id="success-message"
+            class="text-xs text-green-500"
+            aria-live="polite"
+          ></div>
 
-          <button type="submit" class="btn btn-primary">Log in</button>
+          <button
+            type="submit"
+            class="bg-primary text-white rounded-lg px-3 py-2 cursor-pointer hover:bg-accent"
+          >
+            Log in
+          </button>
         </form>
 
         <p class="form-footer">
