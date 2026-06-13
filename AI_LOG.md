@@ -66,3 +66,17 @@ Log of AI use for this assignment. I used AI for things the brief allows: brains
 **Date:** 10 June 2026
 **Purpose:** Help choosing between assignment options and between Tailwind and Bootstrap with Sass, plus setup of Tailwind v4 in the existing Vite project
 **Outcome:** Tailwind v4 installed and building correctly. All page styling done independently.
+
+---
+
+**Tool used:** Claude (Anthropic)
+**Date:** 13 June 2026
+**Purpose:** Debugging help where I described problems in plain English: utilities being overridden by my old CSS (cascade layers), my profile grid stacking vertically, an `@import` order build warning, and a couple of silent typos (`fovus:`, `hover:mouse`).
+**Outcome:** Understood the cause each time (e.g. unlayered CSS beats layered CSS; a grid only controls its direct children) and applied the fixes myself. Styling written by me.
+
+---
+
+**Tool used:** Claude (Anthropic)
+**Date:** 13 June 2026
+**Purpose:** Help formulating my written reflection. I gave my own experiences, opinions and design choices as notes, and asked for help turning them into clear English prose in the format of my previous reflection.
+**Outcome:** The reflections, opinions and design decisions are my own; AI helped with wording and structure. Documented here as required.
