@@ -57,3 +57,26 @@ Log of AI use for this assignment. I used AI for things the brief allows: brains
 **Date:** 3 May 2026
 **Purpose:** Going through my code before submitting. Wanted to confirm that my use of `!` non-null assertions inside async functions was the right pattern, since I already had `if (!element) throw` checks at the top of the files.
 **Outcome:** Confirmed the pattern was correct. TypeScript does not always remember the throw check inside functions further down, so `!` is needed there too. Same pattern I had been using in profile.ts.
+
+---
+
+## CSS Frameworks CA
+
+**Tool used:** Claude (Anthropic)
+**Date:** 10 June 2026
+**Purpose:** Help choosing between assignment options and between Tailwind and Bootstrap with Sass, plus setup of Tailwind v4 in the existing Vite project
+**Outcome:** Tailwind v4 installed and building correctly. All page styling done independently.
+
+---
+
+**Tool used:** Claude (Anthropic)
+**Date:** 13 June 2026
+**Purpose:** Debugging help where I described problems in plain English: utilities being overridden by my old CSS (cascade layers), my profile grid stacking vertically, an `@import` order build warning, and a couple of silent typos (`fovus:`, `hover:mouse`).
+**Outcome:** Understood the cause each time (e.g. unlayered CSS beats layered CSS; a grid only controls its direct children) and applied the fixes myself. Styling written by me.
+
+---
+
+**Tool used:** Claude (Anthropic)
+**Date:** 13 June 2026
+**Purpose:** Help formulating my written reflection. I gave my own experiences, opinions and design choices as notes, and asked for help turning them into clear English prose in the format of my previous reflection.
+**Outcome:** The reflections, opinions and design decisions are my own; AI helped with wording and structure. Documented here as required.
