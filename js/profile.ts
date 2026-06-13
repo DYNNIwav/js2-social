@@ -26,8 +26,8 @@ async function loadProfile() {
   const amIFollowing = profile.followers?.some((f: any) => f.name === myName);
 
   let html = `
-    <div class="profile-header">
-      ${profile.avatar?.url ? `<img src="${profile.avatar.url}" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%;">` : ''}
+    <div class="flex flex-col items-center text-center bg-surface border border-border rounded-xl p-6 my-8">
+      ${profile.avatar?.url ? `<img src="${profile.avatar.url}" alt="Avatar" class="w-24 h-24 rounded-full object-cover">` : ''}
       <h1>${profile.name}</h1>
       <p>${profile.bio || ''}</p>
       <p>Followers: ${profile._count?.followers ?? 0} · Following: ${profile._count?.following ?? 0} · Posts: ${profile._count?.posts ?? 0}</p>
@@ -39,20 +39,20 @@ async function loadProfile() {
     html += `<button id="follow-btn" class="btn btn-primary">${label}</button>`;
   }
 
-  html += `<h2 style="margin-top: 2rem;">Posts</h2>`;
+  html += `<h2 class="mt-8 mb-4">Posts</h2>`;
+  html += `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">`;
   if (profile.posts && profile.posts.length > 0) {
     for (const post of [...profile.posts].reverse()) {
-      html += `
-        <a href="/post/index.html?id=${post.id}" class="post-card">
-          <h3>${post.title}</h3>
-          ${post.media?.url ? `<img src="${post.media.url}" alt="${post.media.alt || post.title}">` : ''}
-          <p>${post.body || ''}</p>
-        </a>
-      `;
+      html += `<a href="/post/index.html?id=${post.id}" class="post-card">
+        <h3>${post.title}</h3>
+        ${post.media?.url ? `<img src="${post.media.url}" alt="${post.media.alt || post.title}">` : ''}
+        <p>${post.body || ''}</p>
+      </a>`;
     }
   } else {
     html += `<p>No posts yet.</p>`;
   }
+  html += `</div>`;
 
   profileContent!.innerHTML = html;
 
